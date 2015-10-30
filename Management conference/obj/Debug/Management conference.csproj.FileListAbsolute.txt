@@ -1,0 +1,9 @@
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\bin\Debug\Management conference.exe.config
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\bin\Debug\Management conference.exe
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\bin\Debug\Management conference.pdb
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\obj\Debug\Management conference.csprojResolveAssemblyReference.cache
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\obj\Debug\Management_conference.Properties.Resources.resources
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\obj\Debug\Management conference.csproj.GenerateResource.Cache
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\obj\Debug\Management conference.exe
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\obj\Debug\Management conference.pdb
+C:\Users\liam\Documents\Visual Studio 2013\Projects\Management conference\Management conference\obj\Debug\Management_conference.Form1.resources
