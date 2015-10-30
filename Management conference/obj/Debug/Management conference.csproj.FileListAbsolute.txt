@@ -11,8 +11,10 @@ C:\Users\liam\repos\ManagementY4\Management conference\bin\Debug\Management conf
 C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management conference.exe
 C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management conference.pdb
 C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management conference.csprojResolveAssemblyReference.cache
-C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management_conference.Form1.resources
 C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management_conference.Properties.Resources.resources
 C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management conference.csproj.GenerateResource.Cache
 C:\Users\liam\repos\ManagementY4\Management conference\bin\Debug\Management conference.exe
 C:\Users\liam\repos\ManagementY4\Management conference\bin\Debug\Management conference.pdb
+C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management_conference.Gui.ConferenceForm.resources
+C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management_conference.Gui.SearchForm.resources
+C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management_conference.Gui.Login.resources

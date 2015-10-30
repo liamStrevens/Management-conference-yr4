@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Management_conference.Logic
 {
-    class User
+   public class User
     {
-        int id;
-        int profileID;
-        String name;
-        String password;
-        List<String> skills;
+        //getter and setters in c#
+        public int id { get; set; }
+        public int profileID { get; set; }
+        public String name { get; set; }
+        public String password { get; set; }
+        public List<String> skills { get; set; }
+
         public User(int id,int profileID,String name,String password, List<String> skills)
         {
             this.id = id;
@@ -21,9 +23,6 @@ namespace Management_conference.Logic
             this.password = password;
             this.skills = skills;
         }
-        public string getName()
-        {
-            return this.name;
-        }
+       
     }
 }

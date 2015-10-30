@@ -10,7 +10,7 @@ namespace Management_conference.Logic
     class System
 
     { 
-       
+       //Hard coded values
         User U1;
         User U2;
         User U3;
@@ -40,6 +40,7 @@ namespace Management_conference.Logic
         List<String> ConSkillList4 = new List<String>(){ "management", "business", "finance", "leadership" };
         List<String> ConSkillList5 = new List<String>(){"management", "business", "finance", "leadership"};
         User LoggedIn;
+       
         public System()
         {
             U1 = new User(1,23,"Liam","password",U1SkillsList);
@@ -65,12 +66,13 @@ namespace Management_conference.Logic
             
             Boolean isMatch;
             string[] words;
-            words = searchTerm.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);
+            words = searchTerm.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);//split string into an array of search terms
             List<Conference> SearchResults = new List<Conference>();
             for (int i = 0; i < words.Length; i++)
             {
                 for (int j = 0; j < ConArray.Count; j++)
                 {
+                    //searches every term against every conference skills
                     isMatch = ConArray[j].SearchTerms(words[i]);
                     if (isMatch)
                     {
@@ -79,6 +81,20 @@ namespace Management_conference.Logic
                 }
             }
             return SearchResults;
+        }
+        public Boolean validateConference(Conference selectedConf)
+        {
+            Boolean isValid= false;
+            //Checks the skills of the logged on user against the choosen conference 
+            for (int i = 0; i < LoggedIn.skills.Count(); i++)
+            {
+                if (selectedConf.skills.Contains(LoggedIn.skills[i]))
+                {
+                    isValid = true;
+                    break;
+                }
+            }
+                return isValid;
         }
     }
 }

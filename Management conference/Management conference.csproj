@@ -44,11 +44,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gui\Form1.cs">
+    <Compile Include="ConferenceForms.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gui\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ConferenceForms.Designer.cs">
+      <DependentUpon>ConferenceForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ConferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\ConferenceForm.Designer.cs">
+      <DependentUpon>ConferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\Conference.cs" />
     <Compile Include="Logic\Messages.cs" />
@@ -56,8 +74,14 @@
     <Compile Include="Logic\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Gui\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Gui\ConferenceForm.resx">
+      <DependentUpon>ConferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
