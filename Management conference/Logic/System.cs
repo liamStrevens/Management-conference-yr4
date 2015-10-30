@@ -62,6 +62,7 @@ namespace Management_conference.Logic
         }
         public List<Conference> searchConference(String searchTerm)
         {
+            
             Boolean isMatch;
             string[] words;
             words = searchTerm.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);

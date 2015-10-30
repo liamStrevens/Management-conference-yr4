@@ -23,10 +23,14 @@ namespace Management_conference
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Conference> SearchResults;
+            List<Conference> SearchResults = new List<Conference>();
+            listBox1.Items.Clear();
+            SearchResults.Clear();
             SearchResults = MainSystem.searchConference(textBox1.Text);
             if (SearchResults.Count > 0)
             {
+                listBox1.Items.Clear();
+
                 for (int i = 0; i < SearchResults.Count(); i++)
                 {
                     listBox1.Items.Add(SearchResults[i].toString());
