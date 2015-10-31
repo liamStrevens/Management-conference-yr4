@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Management_conference.Logic
 {
-    class Messages
+   public class Messages
     {
+        public string sender{get;set;}
+        public DateTime dateAndTime{get;set;}
+        public string message{get;set;}
+        public Messages(String sender, DateTime dateAndTime, string message)
+        {
+            this.sender = sender;
+            this.dateAndTime = dateAndTime;
+            this.message = message;
+        }
     }
 }

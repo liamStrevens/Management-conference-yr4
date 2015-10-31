@@ -18,5 +18,3 @@ C:\Users\liam\repos\ManagementY4\Management conference\bin\Debug\Management conf
 C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management_conference.Gui.ConferenceForm.resources
 C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management_conference.Gui.SearchForm.resources
 C:\Users\liam\repos\ManagementY4\Management conference\obj\Debug\Management_conference.Gui.Login.resources
-C:\Users\liam\repos\ManagementY4\Management conference\bin\Debug\Management conference.exe.CodeAnalysisLog.xml
-C:\Users\liam\repos\ManagementY4\Management conference\bin\Debug\Management conference.exe.lastcodeanalysissucceeded

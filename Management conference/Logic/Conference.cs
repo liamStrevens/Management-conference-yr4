@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Management_conference.Gui;
+using System.IO;
 namespace Management_conference.Logic
 {
     public class Conference
@@ -15,7 +16,8 @@ namespace Management_conference.Logic
        public DateTime StartDate { get; set; }
        public List<User> Participant { get; set; }
        public List<string> skills { get; set; }
-
+       public List<Messages> messages { get; set; }
+       int messageCount = 0;
         public Conference(int id, string name, User owner, DateTime StartDate, List<User> Participant, List<string> skills)
         {
             this.id = id;
@@ -46,7 +48,37 @@ namespace Management_conference.Logic
             }
             return isFound;
         }
+        public void sendMessage(String messageText)
+        {
 
+        }
+        public void getMessages()
+        {
+            Boolean retrievedMessages = false;
+            while (retrievedMessages == false)
+            {
+                try
+                {
+                    string[] lines = File.ReadAllLines(@"C:\Users\liam\Documents\Conferences\" + this.name + ".txt");
+                    messages = new List<Messages>();
+                    // create individual messages by using a foreach loop.
+
+                    //foreach (string line in lines)
+                    for (int i = this.messageCount; i < lines.Length;i++ )
+                    {
+                        string[] words = lines[i].Split(',');
+                        Messages newMessage = new Messages(words[0], Convert.ToDateTime(words[1]), words[2]);
+                        this.messages.Add(newMessage);
+                        retrievedMessages = true;
+                        this.messageCount++;
+                    }
+                }
+                catch(IOException IOexp)
+                {
+                    
+                }
+            }
+        }
         public override String ToString()
         {
             string theString;

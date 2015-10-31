@@ -58,7 +58,10 @@ namespace Management_conference.Gui
                 if (validConf)
                 {
                    currentCon = SearchResults[listBox1.SelectedIndex];
+                   currentCon.Participant.Add(MainSystem.LoggedIn);
+                   currentCon.Participant = currentCon.Participant.Distinct().ToList();
                    ConferenceForm startConference = new ConferenceForm(currentCon);
+                   
                     startConference.Show();
                     
                 }

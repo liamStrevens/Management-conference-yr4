@@ -11,6 +11,7 @@ namespace Management_conference.Logic
 
     { 
        //Hard coded values
+        public User LoggedIn { get; set; }
         User U1;
         User U2;
         User U3;
@@ -39,7 +40,7 @@ namespace Management_conference.Logic
         List<String> ConSkillList3 = new List<String>(){"Java", "testing" ,"etest", "ctesting"};
         List<String> ConSkillList4 = new List<String>(){ "management", "business", "finance", "leadership" };
         List<String> ConSkillList5 = new List<String>(){"management", "business", "finance", "leadership"};
-        User LoggedIn;
+        
        
         public System()
         {
@@ -95,6 +96,12 @@ namespace Management_conference.Logic
                 }
             }
                 return isValid;
+        }
+        public void sendMessage(string messageText, int con)
+        {
+            int userID = LoggedIn.id;
+            DateTime CurrentDateTime = DateTime.Now;
+            
         }
     }
 }
