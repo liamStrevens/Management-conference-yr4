@@ -51,6 +51,7 @@ namespace Management_conference.Logic
             U5 = new User(5,23,"Ignas","password",U5SkillsList);
             U6 = new User(6,23,"Dovydas","password",U6SkillsList);
             LoggedIn = U1;
+            ConUserList1.Add(U2);
             C1 = new Conference(1, "Sql Conference", U1, Convert.ToDateTime("10/10/2014"), ConUserList1, ConSkillList1);
             C2 = new Conference(2, "test conference", U2, Convert.ToDateTime("10/10/2015"), ConUserList2, ConSkillList2);
             C3 = new Conference(3, "Java conference", U3, Convert.ToDateTime("10/10/2014"), ConUserList1, ConSkillList3);
@@ -103,6 +104,12 @@ namespace Management_conference.Logic
             DateTime CurrentDateTime = DateTime.Now;
             selectedConf.sendMessage(messageText, userName, CurrentDateTime);
             
+        }
+        public List<Messages> refreshMessages(Conference selectedConf)
+        {
+            List<Messages> MsgFees = new List<Messages>();
+            MsgFees = selectedConf.getConferenceMessages();
+            return MsgFees;
         }
     }
 }

@@ -15,6 +15,8 @@ namespace Management_conference.Gui
     public partial class ConferenceForm : Form
     {
         Conference selectedConf;
+        List<Messages> selectedMsg;
+       
         public ConferenceForm(Conference selectedConf)
         {
             this.selectedConf = selectedConf;
@@ -25,12 +27,11 @@ namespace Management_conference.Gui
             {
                 listBox1.Items.Add(this.selectedConf.Participant[i].name);
             }
-            this.selectedConf.getMessages();
-            foreach (Messages message in this.selectedConf.messages)
-            {
-                string theMessage = "Message : " + message.message + "                      (Sender :   "+message.sender+"      Date and time : " + message.dateAndTime.ToString()+")";
-                listBox2.Items.Add(theMessage);
-            }
+
+            Timer T = new Timer();
+            T.Tick +=  new EventHandler(refreshMsg);
+            T.Interval = 1000;
+            T.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,5 +46,24 @@ namespace Management_conference.Gui
             }
         }
         
+        private void refreshMsg(object sender,EventArgs e)
+        {
+           
+            
+           
+                
+               
+                    listBox2.Items.Clear();
+                    selectedMsg = Program.MainSystem.refreshMessages(this.selectedConf);
+                    foreach (Messages message in this.selectedConf.messages)
+                    {
+                        string theMessage = "Message : " + message.message + "                      (Sender :   " + message.sender + "      Date and time : " + message.dateAndTime.ToString() + ")";
+                        listBox2.Items.Add(theMessage);
+                    }
+              
+                
+               // MessageBox.Show("hello");
+            
+        }
     }
 }

@@ -57,11 +57,9 @@ namespace Management_conference.Logic
                
             }
         }
-        public void getMessages()
+        public List<Messages> getConferenceMessages()
         {
-            Boolean retrievedMessages = false;
-            while (retrievedMessages == false)
-            {
+           
                 try
                 {
                     string[] lines = File.ReadAllLines(@"C:\Users\liam\Documents\Conferences\" + this.name + ".txt");
@@ -75,7 +73,7 @@ namespace Management_conference.Logic
                         Messages newMessage = new Messages(words[0], Convert.ToDateTime(words[1]), words[2]);
 
                         this.messages.Add(newMessage);
-                        retrievedMessages = true;
+                        
                         this.messageCount++;
                     }
                 }
@@ -83,7 +81,8 @@ namespace Management_conference.Logic
                 {
                     
                 }
-            }
+                return this.messages;
+            
         }
         public override String ToString()
         {
