@@ -97,10 +97,11 @@ namespace Management_conference.Logic
             }
                 return isValid;
         }
-        public void sendMessage(string messageText, int con)
+        public void sendMessage(string messageText, Conference selectedConf)
         {
-            int userID = LoggedIn.id;
+            string userName = LoggedIn.name;
             DateTime CurrentDateTime = DateTime.Now;
+            selectedConf.sendMessage(messageText, userName, CurrentDateTime);
             
         }
     }

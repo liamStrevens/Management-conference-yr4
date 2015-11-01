@@ -48,9 +48,14 @@ namespace Management_conference.Logic
             }
             return isFound;
         }
-        public void sendMessage(String messageText)
+        public void sendMessage(String messageText , string User,DateTime currentTime)
         {
-
+            Messages newMessage = new Messages(User, currentTime, messageText);
+            using (StreamWriter sw = File.AppendText(@"C:\Users\liam\Documents\Conferences\" + this.name + ".txt"))
+            {
+                sw.WriteLine(User+","+currentTime.ToString()+","+messageText);
+               
+            }
         }
         public void getMessages()
         {
@@ -64,10 +69,11 @@ namespace Management_conference.Logic
                     // create individual messages by using a foreach loop.
 
                     //foreach (string line in lines)
-                    for (int i = this.messageCount; i < lines.Length;i++ )
+                    for (int i = 0; i < lines.Length;i++ )
                     {
                         string[] words = lines[i].Split(',');
                         Messages newMessage = new Messages(words[0], Convert.ToDateTime(words[1]), words[2]);
+
                         this.messages.Add(newMessage);
                         retrievedMessages = true;
                         this.messageCount++;

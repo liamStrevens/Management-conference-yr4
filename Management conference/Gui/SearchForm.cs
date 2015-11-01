@@ -13,7 +13,7 @@ namespace Management_conference.Gui
 {
     public partial class SearchForm : Form
     {
-        Logic.System MainSystem = new Logic.System();
+        
         List<Conference> SearchResults = new List<Conference>();
         Conference currentCon;
         public SearchForm()
@@ -28,7 +28,7 @@ namespace Management_conference.Gui
             
             listBox1.Items.Clear();
             SearchResults.Clear();
-            SearchResults = MainSystem.searchConference(textBox1.Text);
+            SearchResults = Program.MainSystem.searchConference(textBox1.Text);
             if (SearchResults.Count > 0)
             {
                 listBox1.Items.Clear();
@@ -54,11 +54,11 @@ namespace Management_conference.Gui
             }
             else 
             {
-                validConf = MainSystem.validateConference(SearchResults[listBox1.SelectedIndex]);
+                validConf = Program.MainSystem.validateConference(SearchResults[listBox1.SelectedIndex]);
                 if (validConf)
                 {
                    currentCon = SearchResults[listBox1.SelectedIndex];
-                   currentCon.Participant.Add(MainSystem.LoggedIn);
+                   currentCon.Participant.Add(Program.MainSystem.LoggedIn);
                    currentCon.Participant = currentCon.Participant.Distinct().ToList();
                    ConferenceForm startConference = new ConferenceForm(currentCon);
                    

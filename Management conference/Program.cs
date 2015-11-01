@@ -12,7 +12,7 @@ namespace Management_conference
         /// The main entry point for the application.
         /// 
         /// </summary>
-       
+        public static Logic.System MainSystem = new Logic.System();
         [STAThread]
         static void Main()
         {
