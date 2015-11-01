@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="Logic\Conference.cs" />
     <Compile Include="Logic\Messages.cs" />
+    <Compile Include="Logic\Profile.cs" />
     <Compile Include="Logic\System.cs" />
     <Compile Include="Logic\User.cs" />
     <Compile Include="Program.cs" />

@@ -18,6 +18,7 @@ namespace Management_conference.Logic
         User U4;
         User U5;
         User U6;
+        Profile tempProfile = new Profile(1, "Liam Strevens", "liamstrevens131@hotmail.com", "software engineering", "Programming");
         Conference C1;
         Conference C2;
         Conference C3;
@@ -44,12 +45,12 @@ namespace Management_conference.Logic
        
         public System()
         {
-            U1 = new User(1,23,"Liam","password",U1SkillsList);
-            U2 = new User(2,23,"Sam","password",U2SkillsList);
-            U3 = new User(3,23,"Joe","password",U3SkillsList);
-            U4 = new User(4,23,"Aaron","password",U4SkillsList);
-            U5 = new User(5,23,"Ignas","password",U5SkillsList);
-            U6 = new User(6,23,"Dovydas","password",U6SkillsList);
+            U1 = new User(1,23,"Liam","password",U1SkillsList,tempProfile);
+            U2 = new User(2, 23, "Sam", "password", U2SkillsList, tempProfile);
+            U3 = new User(3, 23, "Joe", "password", U3SkillsList, tempProfile);
+            U4 = new User(4, 23, "Aaron", "password", U4SkillsList, tempProfile);
+            U5 = new User(5, 23, "Ignas", "password", U5SkillsList, tempProfile);
+            U6 = new User(6, 23, "Dovydas", "password", U6SkillsList, tempProfile);
             LoggedIn = U1;
             ConUserList1.Add(U2);
             C1 = new Conference(1, "Sql Conference", U1, Convert.ToDateTime("10/10/2014"), ConUserList1, ConSkillList1);
